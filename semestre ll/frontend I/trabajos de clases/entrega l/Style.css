@@ -1,0 +1,4 @@
+body { font-family: Calibri; padding: 20px; }
+#prodResult { margin-top: 20px; font-size: 18px; }
+.high { color: green; }
+.low { color: orange; }
