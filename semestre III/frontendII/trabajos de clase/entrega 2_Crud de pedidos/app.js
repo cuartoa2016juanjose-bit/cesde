@@ -20,7 +20,7 @@ btnGuardar.addEventListener("click", () => {
 function validarFormulario() {
   let datosForm;
   if (clienteInput.value == "" || productoInput.value == "" || precioInput.value == "" || imagenInput.value == "") {
-    alert("Todos los campos son obligatorios");
+    alert("Todos los campos son obligatorios.");
     return;
   } else {
     datosForm = {
@@ -53,7 +53,7 @@ function guardarDatos(datos) {
   //guardar los datos en el local storage
   localStorage.setItem("listadoPedidos", JSON.stringify(pedidos));
   //validar que los datos se guardaron correctamente
-  alert("Datos guardados correctamente");
+  alert("Datos guardados correctamente.");
 
 }
 //funcion para extraer los datos guardados en el local storage
@@ -102,10 +102,10 @@ function eliminarPedido(pos) {
   if (pedidosGuardados != null) {
     pedidos = pedidosGuardados;
   }
-  let confirmar = confirm("¿Desea eliminar el pedido del cliente: " + pedidos[pos].cliente + " (" + pedidos[pos].producto + ") ");
+  let confirmar = confirm("¿Desea eliminar el pedido del cliente: " + pedidos[pos].cliente + " (" + pedidos[pos].producto + ")?");
   if (confirmar) {
     pedidos.splice(pos, 1);
-    alert("pedido eliminado correctamente");
+    alert("Pedido eliminado correctamente.");
     localStorage.setItem("listadoPedidos", JSON.stringify(pedidos));
     borrarTabla();
     mostrarDatos();
@@ -139,7 +139,7 @@ function actualizarPedido(pos) {
     pedidos[pos].observacion = observacionInput.value;
 
     localStorage.setItem("listadoPedidos", JSON.stringify(pedidos));
-    alert("Pedido actualizado correctamente");
+    alert("Pedido actualizado correctamente.");
 
     clienteInput.value = "";
     productoInput.value = "";
